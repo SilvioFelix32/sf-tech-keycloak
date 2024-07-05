@@ -1,0 +1,14 @@
+version: "3"
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      DB_VENDOR: postgres
+      DB_ADDR: nicely-maiden-fireback.data-1.use1.tembo.io
+      DB_DATABASE: sf-tech-keycloak
+      DB_USER: postgres
+      DB_PASSWORD: L2jKt8TEC4brPMxo
+    ports:
+      - "8080:8080"
