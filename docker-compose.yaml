@@ -25,6 +25,8 @@ services:
       DB_PASSWORD: L2jKt8TEC4brPMxo
     ports:
       - "8080:8080"
+    volumes:
+      - ./.docker/keycloak/transaction-logs:/opt/keycloak/data/transaction-logs
     command: start-dev
     depends_on:
       - db
